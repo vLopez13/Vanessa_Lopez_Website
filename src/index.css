@@ -1,11 +1,18 @@
+/* src/index.css */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
+  /* Default (Dark Mode) Variables */
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+
+  --card-bg: #1a1a1a; /* Dark mode card color */
+  --text-main: rgba(255, 255, 255, 0.87);
+  --text-secondary: #a1a1aa;
+  --accent-color: #646cff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,7 +22,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--accent-color);
   text-decoration: inherit;
 }
 a:hover {
@@ -24,10 +31,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  /* I removed 'display: flex' and 'place-items: center' so the page can scroll! */
 }
 
 h1 {
@@ -35,32 +41,14 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
+/* Light Mode Overrides */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
+    --card-bg: #f9f9f9; /* Light mode card color */
+    --text-main: #213547;
+    --text-secondary: #555;
   }
   button {
     background-color: #f9f9f9;
