@@ -1,17 +1,24 @@
-// src/ProjectCard.jsx
 import React from 'react';
-import './ProjectCard.css'; // We will create this next
+import './ProjectCard.css'; 
 
-// "props" acts like a bag of data passed from the parent
 function ProjectCard(props) {
   return (
-    <div className="card">
+    <div className="project-card">
       <img src={props.image} alt={props.title} className="card-image" />
+      
       <div className="card-content">
         <h3>{props.title}</h3>
         <p>{props.description}</p>
+        
+        {/* New: Display the tags if they exist */}
+        <div className="tags-container">
+          {props.tags && props.tags.map((tag, index) => (
+            <span key={index} className="tag">{tag}</span>
+          ))}
+        </div>
+
         <a href={props.link} target="_blank" rel="noreferrer">
-          <button>View Project</button>
+          <button className="btn">View Project</button>
         </a>
       </div>
     </div>

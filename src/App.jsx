@@ -1,56 +1,25 @@
-// src/App.jsx
 import React from 'react';
 import ProjectCard from './ProjectCard';
 import './App.css'; 
 
 function App() {
-  
-  <div className="hero-buttons">
-  {/* Resume Button */}
-  <a 
-    href="/Software-Engineer-Res-Vanessa-Lopez.pdf" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="btn"
-  >
-    📄 Vanessa Lopez Resume
-  </a>
-
-  {/* Github Button */}
-  <a 
-    href="https://github.com/vLopez13" 
-    target="_blank" 
-    rel="noreferrer" 
-    className="btn"
-  >
-    💻 Github
-  </a>
-
-  {/* NEW: Contact Button */}
-  <a 
-    href="mailto:vanessalo13@yahoo.com" /* ⚠️ CHANGE THIS to your actual email */
-    className="btn"
-  >
-    📧 Mail to Me
-  </a>
-</div>
-
+  // 1. Data Definitions go at the top
   const myProjects = [
     {
       id: 1,
-      title: "Products Book Agent", // <--- Your Project Name
-      description: "A agentic solution to libraries using FastAPI", // <--- Short description
-      image: "/images/tetris.png", // <--- Path to the image you just pasted
+      title: "Products Book Agent",
+      description: "A agentic solution to libraries using FastAPI",
+      image: "/images/tetris.png", // Make sure this image exists in your public folder!
       tags: ["FastAPI", "Python", "Agents", "Postgresql"],
-      link: "https://github.com/vLopez13/product-bookstore-agent" // <--- Your deployed link
+      link: "https://github.com/vLopez13/product-bookstore-agent"
     },
     {
       id: 2,
       title: "Insurance Claims App",
-      description: "Helps process and review each medical procedure apporval or denial in minutes with AI and human interference.",
+      description: "Helps process and review each medical procedure approval or denial.",
       image: "https://via.placeholder.com/300",
       tags: ["FastAPI", "Python", "Agents", "LLMS"],
-      link: "https://github.com/yourusername/weather"
+      link: "https://github.com/vLopez13/InsuranceClaims"
     },
     {
       id: 3,
@@ -58,47 +27,78 @@ function App() {
       description: "A classic Pomodoro Timer to help productivity and focus.",
       image: "https://via.placeholder.com/300",
       tags: ["Python", "API"],
-      link: "https://github.com/yourusername/todo"
+      link: "https://github.com/vLopez13/pomodoro-coworker"
     },
     {
       id: 4, 
-      title: "Salesforce Equipment Tracking App",
+      title: "Salesforce Equipment Tracking",
       description:"An app that allows you to track all health equipment in a hospital",
       image: "https://via.placeholder.com/300",
       tags: ["Salesforce", "Apex", "LWC"],
-      link: "https:github.com/yourusername/equipment-tracker"
+      link: "https://github.com/vLopez13/salesforce-equipment"
     },
     {
       id: 5, 
-      title: "territory Tracking App",
+      title: "Territory Tracking App",
       description:"An app that allows sales reps to track their territories and customers",
       image: "https://via.placeholder.com/300",
       tags: ["Salesforce", "Apex", "LWC"],
-      link: "https:github.com/yourusername/territory-tracker"
+      link: "https://github.com/yourusername/territory-tracker"
     }
- ];
+  ];
 
- return (
-  <div className="portfolio-container">
-    <header>
-      <h1>My Creative Portfolio</h1>
-      <p>Welcome to my work!</p>
-    </header>
+  // 2. The Return statement controls what is seen on screen
+  return (
+    <div className="portfolio-container">
+      <header className="hero-section">
+        <h1>My Creative Portfolio</h1>
+        <p className="bio">Welcome to my work! I am a Software Engineer specializing in Python and Salesforce.</p>
+        
+        {/* --- MOVED THE BUTTONS HERE --- */}
+        <div className="hero-buttons">
+          <a 
+            href="/Software-Engineer-Res-Vanessa-Lopez.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn"
+          >
+            📄 Vanessa Lopez Resume
+          </a>
 
-    <div className="project-grid">
-      {/* THE MAGIC HAPPENS HERE */}
-      {myProjects.map((project) => (
-        <ProjectCard 
-          key={project.id}
-          title={project.title}
-          description={project.description}
-          image={project.image}
-          link={project.link}
-        />
-      ))}
+          <a 
+            href="https://github.com/vLopez13" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="btn"
+          >
+            💻 Github
+          </a>
+
+          <a 
+            href="mailto:vanessalo13@yahoo.com" 
+            className="btn"
+          >
+            📧 Mail to Me
+          </a>
+        </div>
+        {/* ----------------------------- */}
+      </header>
+
+      <div className="project-grid">
+        {myProjects.map((project) => (
+          <ProjectCard 
+            key={project.id}
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            link={project.link}
+            // Passing tags to the card so we can use them
+            tags={project.tags} 
+          />
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
 }
 
 export default App;
