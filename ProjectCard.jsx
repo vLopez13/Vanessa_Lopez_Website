@@ -9,8 +9,7 @@ function ProjectCard(props) {
       <div className="card-content">
         <h3>{props.title}</h3>
         <p>{props.description}</p>
-        
-        {/* New: Display the tags if they exist */}
+
         <div className="tags-container">
           {props.tags && props.tags.map((tag, index) => (
             <span key={index} className="tag">{tag}</span>

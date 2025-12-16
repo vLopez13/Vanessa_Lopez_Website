@@ -3,13 +3,12 @@ import ProjectCard from './ProjectCard';
 import './App.css'; 
 
 function App() {
-  // 1. Data Definitions go at the top
   const myProjects = [
     {
       id: 1,
       title: "Products Book Agent",
       description: "A agentic solution to libraries using FastAPI",
-      image: "/images/tetris.png", // Make sure this image exists in your public folder!
+      image: "/images/tetris.png", 
       tags: ["FastAPI", "Python", "Agents", "Postgresql"],
       link: "https://github.com/vLopez13/product-bookstore-agent"
     },
@@ -46,15 +45,12 @@ function App() {
       link: "https://github.com/yourusername/territory-tracker"
     }
   ];
-
-  // 2. The Return statement controls what is seen on screen
   return (
     <div className="portfolio-container">
       <header className="hero-section">
         <h1>My Creative Portfolio</h1>
-        <p className="bio">Welcome to my work! I am a Software Engineer specializing in Python and Salesforce.</p>
+        <p className="bio">Welcome to my work! I am a Software Engineer specializing in Python, AI, and Salesforce.</p>
         
-        {/* --- MOVED THE BUTTONS HERE --- */}
         <div className="hero-buttons">
           <a 
             href="/Software-Engineer-Res-Vanessa-Lopez.pdf" 
@@ -81,7 +77,6 @@ function App() {
             📧 Mail to Me
           </a>
         </div>
-        {/* ----------------------------- */}
       </header>
 
       <div className="project-grid">
@@ -92,7 +87,6 @@ function App() {
             description={project.description}
             image={project.image}
             link={project.link}
-            // Passing tags to the card so we can use them
             tags={project.tags} 
           />
         ))}
@@ -100,5 +94,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

@@ -4,12 +4,11 @@
   line-height: 1.5;
   font-weight: 400;
 
-  /* Default (Dark Mode) Variables */
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
-  --card-bg: #1a1a1a; /* Dark mode card color */
+  --card-bg: #1a1a1a;
   --text-main: rgba(255, 255, 255, 0.87);
   --text-secondary: #a1a1aa;
   --accent-color: #646cff;
@@ -33,7 +32,6 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  /* I removed 'display: flex' and 'place-items: center' so the page can scroll! */
 }
 
 h1 {
@@ -41,12 +39,11 @@ h1 {
   line-height: 1.1;
 }
 
-/* Light Mode Overrides */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
-    --card-bg: #f9f9f9; /* Light mode card color */
+    --card-bg: #f9f9f9; 
     --text-main: #213547;
     --text-secondary: #555;
   }
