@@ -38,11 +38,11 @@ function App() {
     },
     {
       id: 5, 
-      title: "Territory Tracking App",
-      description:"An app that allows sales reps to track their territories and customers",
+      title: "Healthcare Conversationalist AI",
+      description:"An app that allows you to interact and chat with healthcare data using AI",
       image: "https://via.placeholder.com/300",
       tags: ["Salesforce", "Apex", "LWC"],
-      link: "https://github.com/yourusername/territory-tracker"
+      link: "https://github.com/vLopez13/conversationbot"
     }
   ];
   return (
