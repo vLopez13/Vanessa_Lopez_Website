@@ -24,7 +24,7 @@ function App() {
       id: 3,
       title: "Pomodoro Timer",
       description: "A classic Pomodoro Timer to help productivity and focus.",
-      image: "https://via.placeholder.com/300",
+      image: "images/image_pomodoro_time.png",
       tags: ["Python", "API"],
       link: "https://github.com/vLopez13/pomodoro-coworker"
     },
@@ -40,7 +40,7 @@ function App() {
       id: 5, 
       title: "Healthcare Conversationalist AI",
       description:"An app that allows you to interact and chat with healthcare data using AI",
-      image: "https://via.placeholder.com/300",
+      image: "images/healthcareapp.png",
       tags: ["Salesforce", "Apex", "LWC"],
       link: "https://github.com/vLopez13/conversationbot"
     }
