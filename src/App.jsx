@@ -24,7 +24,7 @@ function App() {
       id: 3,
       title: "Pomodoro Timer",
       description: "A classic Pomodoro Timer to help productivity and focus.",
-      image: "images/image_pomodoro_time.png",
+      image: "/images/image_pomodoro_time.png",
       tags: ["Python", "API"],
       link: "https://github.com/vLopez13/pomodoro-coworker"
     },
